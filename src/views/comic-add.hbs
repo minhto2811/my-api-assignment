@@ -1,0 +1,40 @@
+<h1 class="text-center">Thêm truyện tranh</h1>
+
+<form enctype="multipart/form-data" class="col-6 mx-auto mt-5" method="post" action="/comic/add/new">
+    <div class="mb-3">
+        <label for="name" class="form-label">Tên truyện</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Nhập tên truyện..." required>
+    </div>
+
+    <div class="mb-3">
+        <label for="description" class="form-label">Tiêu đề</label>
+        <input type="text" class="form-control" name="description" id="description" placeholder="Nhập tiêu đề..."
+            required>
+    </div>
+
+
+    <div class="mb-3">
+        <label for="author" class="form-label">Tác giả</label>
+        <input type="text" class="form-control" name="author" id="author" placeholder="Nhập tác giả..." required>
+    </div>
+
+    <div class="mb-3">
+        <label for="year" class="form-label">Năm xuất bản</label>
+        <input type="number" step="1" class="form-control" name="year" id="year" placeholder="Nhập năm xuất bản..."
+            required>
+    </div>
+
+
+    <div class="mb-3">
+        <label for="avatar" class="form-label">Ảnh đại diện</label>
+        <input type="file" accept="image/*" class="form-control" name="avatar" id="avatar" placeholder="Chọn ảnh đại diện" required>
+    </div>
+
+    
+    <div class="mb-3">
+        <label for="image" class="form-label">Ảnh liên quan</label>
+        <input type="file" accept="image/*" class="form-control" name="image" id="image" multiple required>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Thêm ngay</button>
+</form>
