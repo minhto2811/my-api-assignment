@@ -1,6 +1,8 @@
 
 
 const comic = require('./comic.route');
+const user = require('./user.route');
+
 
 
 function route(app) {
@@ -8,6 +10,7 @@ function route(app) {
         res.send('Hey this is my API running 🥳')
     })
     app.use('/comic', comic);
+    app.use('/user', user);
 
 }
 
