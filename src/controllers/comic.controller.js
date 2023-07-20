@@ -1,6 +1,7 @@
 
 const { request } = require('express');
 const Comic = require('../models/comic.model');
+const Comment = require('../models/comment.model');
 const { uploadImageToFirestore } = require('../configs/firestore.configs');
 
 class ApiController {
@@ -32,6 +33,18 @@ class ApiController {
         obj.image = uploadedUrls;
         console.log(obj);
         Comic.create(obj).then((rs) => res.redirect('/comic/home')).catch((err) => { res.json(err) });
+    }
+
+    comment(req, res) {
+        const id_comic = req.params.id;
+        const data = req.body;
+        data.id_comic = id_comic;
+        console.log(data);
+        Comment.create(data).then((rs) => res.json(rs)).catch((err) => res.json(err));
+    }
+    readComment(req, res) {
+        const id_comic = req.params.id;
+        Comment.find({id_comic:id_comic}).then((rs) => res.json(rs)).catch((err) => res.json(err));
     }
 }
 

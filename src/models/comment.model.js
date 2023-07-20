@@ -1,0 +1,15 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+
+
+const Comment = new mongoose.Schema({
+    id_comic: { type: String, require: true, unique: true },
+    id_user: { type: String, require: true },
+    fullname: { type: String, require: true },
+    content: { type: String, require: true },
+}, {
+    collection: "comments"
+});
+
+module.exports = mongoose.model('Comment', Comment);
