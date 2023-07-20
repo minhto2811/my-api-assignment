@@ -9,6 +9,6 @@ router.get('/add', controller.add);
 router.get('/home', controller.home);
 router.get('/api/home', controller.listComic);
 router.post('/api/comment/:id', controller.comment);
-router.get('/api/read-comment/:id', controller.readComment);
+router.get('/api/comment/:id', controller.readComment);
 
 module.exports = router;
