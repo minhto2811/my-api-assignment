@@ -4,10 +4,10 @@ const Schema = mongoose.Schema;
 
 
 const Comment = new mongoose.Schema({
-    id_comic: { type: String, require: true, },
-    id_user: { type: String, require: true },
     fullname: { type: String, require: true },
     content: { type: String, require: true },
+    id_comic: { type: String, require: true, },
+    id_user: { type: String, require: true },
 }, {
     collection: "comments"
 });

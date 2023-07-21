@@ -4,7 +4,7 @@ const controller = require('../controllers/user.controller');
 
 router.post('/api/add/new', controller.addNew);
 
-
+router.post('/api/login/auto', controller.loginAuto);
 router.post('/api/login', controller.login);
 
 module.exports = router;

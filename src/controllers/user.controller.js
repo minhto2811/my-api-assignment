@@ -18,6 +18,14 @@ class ApiController {
                 res.json(user);
             }).catch((err) => res.json(err));
     }
+    loginAuto(req, res) {
+        const username = req.body.username;
+        const password = req.body.password;
+        User.findOne({ username: username, password: password })
+            .then((user) => {
+                res.json(user);
+            }).catch((err) => res.json(err));
+    }
 }
 
 

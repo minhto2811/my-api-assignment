@@ -1,5 +1,4 @@
 
-const { request } = require('express');
 const Comic = require('../models/comic.model');
 const Comment = require('../models/comment.model');
 const { uploadImageToFirestore } = require('../configs/firestore.configs');
