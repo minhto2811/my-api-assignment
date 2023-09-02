@@ -45,6 +45,11 @@ class ApiController {
         const id_comic = req.params.id;
         Comment.find({id_comic:id_comic}).then((rs) => res.json(rs)).catch((err) => res.json(err));
     }
+
+    delete(req,res){
+        const id = req.body.id;
+        console.log("id")
+    }
 }
 
 
